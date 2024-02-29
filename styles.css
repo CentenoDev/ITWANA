@@ -1,0 +1,193 @@
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: 'Arial', sans-serif;  /* Define la fuente para el cuerpo de la página */
+  margin: 0;  /* Elimina el margen exterior del cuerpo de la página */
+  padding: 0;  /* Elimina el relleno del cuerpo de la página */
+  color: #000;  /* Establece el color del texto del cuerpo de la página a negro */
+}
+
+/* Estilos para el encabezado */
+header {
+  background: transparent;  /* Fondo transparente para el encabezado */
+  position: absolute;  /* Establece la posición absoluta para el encabezado */
+  width: 100%;  /* Ancho al 100% del viewport */
+  top: 0;  /* Coloca el encabezado en la parte superior */
+  z-index: 2;  /* Ajusta el índice de apilamiento para que esté sobre el video */
+}
+
+/* Estilos para el encabezado al hacer scroll */
+header.abajo {
+  background: #ffffff;  /* Fondo blanco sólido al hacer scroll */
+  
+  position: fixed;  /* Fija el encabezado en la parte superior al hacer scroll */
+  width: 100%;  /* Establece el ancho del encabezado al 100% */
+  top: 0;  /* Establece la posición superior del encabezado fijo */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  /* Agrega sombra al encabezado al hacer scroll */
+  z-index: 3;  /* Ajusta el índice de apilamiento del encabezado al hacer scroll */
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  width: 270px;  /* Establece el ancho del contenedor del logo */
+  height: 120px;  /* Establece la altura del contenedor del logo */
+  overflow: hidden;  /* Oculta el contenido que desborda del contenedor del logo */
+  position: relative;  /* Establece la posición relativa para el contenedor del logo */
+  z-index: 2;  /* Ajusta el índice de apilamiento del contenedor del logo */
+}
+
+/* Estilos para la imagen del logo */
+.logo-container img {
+  width: 100%;  /* Establece el ancho de la imagen del logo al 100% del contenedor */
+  height: 135%;  /* Establece la altura de la imagen del logo al 135% del contenedor */
+  display: block;  /* Configura la imagen como un elemento de bloque */
+  object-fit: cover;  /* Escala y recorta la imagen del logo para que se ajuste al contenedor */
+}
+/* Estilos para la barra de navegación */
+nav {
+  
+  display: flex;  /* Establece el modelo de caja como flex para la barra de navegación */
+  justify-content: space-between;  /* Distribuye el espacio entre los elementos hijos de la barra de navegación */
+  align-items: center;  /* Centra los elementos hijos verticalmente dentro de la barra de navegación */
+  border-radius: 10px;  /* Agrega bordes redondeados a la barra de navegación */
+  box-shadow: 0 5px 10px rgba(13, 0, 255, 0.1);  /* Agrega sombra a la barra de navegación */
+  padding: 0.5em 1em;  /* Agrega relleno a la barra de navegación */
+  flex-grow: 1;  /* Permite que la barra de navegación crezca para ocupar todo el espacio disponible */
+  z-index: 2;  /* Ajusta el índice de apilamiento de la barra de navegación */
+}
+
+/* Estilos para la lista de la barra de navegación */
+nav ul {
+  display: flex;  /* Establece el modelo de caja como flex para la lista de la barra de navegación */
+  list-style: none;  /* Elimina los estilos de lista (viñetas, números, etc.) */
+  padding: 0;  /* Elimina el relleno de la lista de la barra de navegación */
+  margin: 0;  /* Elimina el margen de la lista de la barra de navegación */
+  align-self: flex-end;  /* Alinea la lista al final de la barra de navegación */
+  gap: 20px;  /* Agrega espacio entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+nav a {
+  text-decoration: none;  /* Elimina la decoración de subrayado de los enlaces */
+  color: #004AAD;  /* Establece el color del texto de los enlaces */
+  font-weight: bold;  /* Establece el peso de la fuente a negrita */
+  font-size: 1.2em;  /* Establece el tamaño de la fuente para los enlaces */
+  padding: 0.7em 1em;  /* Agrega relleno a los enlaces */
+  transition: color 0.3s ease-in-out;  /* Agrega una transición suave al color del texto */
+}
+
+nav li:hover a {
+  color: #004AAD;  /* Cambia el color del texto de los enlaces al pasar el mouse */
+}
+
+/* Subelemento para efectos al pasar el mouse en la barra de navegación */
+nav li {
+  position: relative;  /* Establece la posición relativa para los elementos de la lista */
+}
+
+nav li:hover::after {
+  content: "";  /* Agrega contenido después de los elementos de la lista al pasar el mouse */
+  position: absolute;  /* Establece la posición absoluta para el contenido adicional */
+  top: 0;  /* Coloca el contenido adicional en la parte superior */
+  left: 0;  /* Coloca el contenido adicional en la parte izquierda */
+  width: 100%;  /* Establece el ancho al 100% del elemento padre */
+  height: 100%;  /* Establece la altura al 100% del elemento padre */
+  background: radial-gradient(circle, #00e8ff 0%, #0077cc 100%);  /* Agrega un degradado radial al fondo */
+  opacity: 0.3;  /* Establece la opacidad del contenido adicional */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);  /* Agrega sombra al contenido adicional */
+  transition: opacity 0.3s ease-in-out;  /* Agrega una transición suave a la opacidad */
+  border-radius: 50%;  /* Agrega bordes redondeados al contenido adicional */
+}
+/* Estilos para la sección hero */
+#hero {
+  position: relative;  /* Establece la posición relativa para la sección hero */
+  min-height: 100vh;  /* Establece la altura mínima al 100% del viewport height */
+  overflow: hidden;  /* Oculta el contenido que desborda de la sección hero */
+}
+
+/* Capa opaca sobre el video en la sección hero */
+#hero .capa {
+  position: absolute;  /* Establece la posición absoluta para la capa opaca */
+  top: 0;  /* Coloca la capa opaca en la parte superior */
+  left: 0;  /* Coloca la capa opaca en la parte izquierda */
+  width: 100%;  /* Establece el ancho al 100% del elemento padre */
+  height: 100%;  /* Establece la altura al 100% del elemento padre */
+  background-color: rgba(0, 0, 0, 0.5);  /* Establece el color de fondo con opacidad */
+  z-index: 1;  /* Ajusta el índice de apilamiento de la capa opaca */
+}
+
+/* Estilos para el contenido en la sección hero */
+#hero .promo {
+  padding-top: 150px;  /* Agrega relleno superior al contenido en la sección hero */
+  display: flex;  /* Establece el modelo de caja como flex para el contenido en la sección hero */
+  flex-direction: column;  /* Establece la dirección de los elementos como columna */
+  justify-content: center;  /* Centra los elementos verticalmente en la sección hero */
+  align-items: center;  /* Centra los elementos horizontalmente en la sección hero */
+  width: 60%;  /* Establece el ancho del contenido en la sección hero al 60% */
+  margin: auto;  /* Centra el contenido horizontalmente usando márgenes automáticos */
+  position: relative;  /* Establece la posición relativa para el contenido en la sección hero */
+  z-index: 2;  /* Ajusta el índice de apilamiento del contenido en la sección hero */
+}
+
+
+/* Estilos para los textos en la sección hero */
+.promo h1,
+.promo p {
+  
+  font-size: 2.5rem;  /* Establece el tamaño de la fuente para los títulos y párrafos */
+  text-align: center;  /* Centra el texto en los títulos y párrafos */
+  color: #f3f3f3;  /* Establece el color del texto en los títulos y párrafos */
+  line-height: 1.5;  /* Establece la altura de línea para mejorar la legibilidad */
+}
+
+.promo h1 {
+  font-weight: 700;  /* Establece el peso de la fuente a 700 para los títulos */
+  font-size: 3.5rem;  /* Ajusta el tamaño de la fuente para los títulos */
+}
+
+.promo p {
+  font-weight: 900;  /* Establece el peso de la fuente a 900 para los párrafos */
+}
+
+/* Estilos para el botón en la sección hero */
+button {
+  display: inline-block;  /* Establece el botón como un elemento en línea con bloque */
+  border: none;  /* Elimina el borde del botón */
+  border-radius: 30px;  /* Agrega bordes redondeados al botón */
+  padding: 20px 30px;  /* Agrega relleno al botón */
+  background-color: #004AAD;  /* Establece el color de fondo del botón */
+  color: #ffffff;  /* Establece el color del texto del botón */
+  font-size: 1.8rem;  /* Establece el tamaño de la fuente para el botón */
+  font-weight: 800;  /* Establece el peso de la fuente a 800 para el botón */
+  text-align: center;  /* Centra el texto en el botón */
+  transition: all 0.15s ease-in-out;  /* Agrega una transición suave a todas las propiedades */
+  vertical-align: middle;  /* Alinea verticalmente el botón */
+  cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);  /* Agrega sombra al botón */
+}
+
+button:focus {
+  outline: none;  /* Elimina el contorno al enfocar el botón */
+}
+
+button:hover {
+  transform: translate(0, -5px);  /* Mueve el botón hacia arriba al pasar el mouse */
+}
+
+/* Estilos para el video en la sección hero */
+#hero video {
+  position: absolute;  /* Establece la posición absoluta para el video en la sección hero */
+  top: 0;  /* Coloca el video en la parte superior */
+  left: 0;  /* Coloca el video en la parte izquierda */
+  width: 100%;  /* Establece el ancho al 100% del elemento padre */
+  height: 100%;  /* Establece la altura al 100% del elemento padre */
+  object-fit: cover;  /* Escala y recorta el video para que se ajuste al contenedor */
+  z-index: -1;  /* Ajusta el índice de apilamiento del video detrás del contenido */
+}
+
+/* Estilos para el pie de página */
+footer {
+  text-align: center;  /* Centra el texto en el pie de página */
+  padding: 20px;  /* Agrega relleno al pie de página */
+  background-color: #004AAD;  /* Establece el color de fondo del pie de página */
+  color: #ffffff;  /* Establece el color del texto en el pie de página */
+}
