@@ -12,18 +12,24 @@ header {
   position: absolute;  /* Establece la posición absoluta para el encabezado */
   width: 100%;  /* Ancho al 100% del viewport */
   top: 0;  /* Coloca el encabezado en la parte superior */
-  z-index: 2;  /* Ajusta el índice de apilamiento para que esté sobre el video */
+  z-index: 3;  /* Ajusta el índice de apilamiento para que esté sobre el video */
+  transition: background 0.3s ease-in-out; /* Agrega una transición suave al cambiar el fondo */
 }
 
 /* Estilos para el encabezado al hacer scroll */
 header.abajo {
-  background: #ffffff;  /* Fondo blanco sólido al hacer scroll */
-  
-  position: fixed;  /* Fija el encabezado en la parte superior al hacer scroll */
-  width: 100%;  /* Establece el ancho del encabezado al 100% */
-  top: 0;  /* Establece la posición superior del encabezado fijo */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  /* Agrega sombra al encabezado al hacer scroll */
-  z-index: 3;  /* Ajusta el índice de apilamiento del encabezado al hacer scroll */
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+header.abajo nav a {
+  color: #004AAD;  /* Cambia el color del texto de los enlaces al hacer scroll */
+}
+.logo-container img.hidden {
+  display: none;
 }
 
 /* Estilos para el contenedor del logo */
@@ -68,7 +74,7 @@ nav ul {
 /* Estilos para los enlaces de la barra de navegación */
 nav a {
   text-decoration: none;  /* Elimina la decoración de subrayado de los enlaces */
-  color: #004AAD;  /* Establece el color del texto de los enlaces */
+  color: #fff;  /* Establece el color del texto de los enlaces */
   font-weight: bold;  /* Establece el peso de la fuente a negrita */
   font-size: 1.2em;  /* Establece el tamaño de la fuente para los enlaces */
   padding: 0.7em 1em;  /* Agrega relleno a los enlaces */
@@ -95,7 +101,7 @@ nav li:hover::after {
   opacity: 0.3;  /* Establece la opacidad del contenido adicional */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);  /* Agrega sombra al contenido adicional */
   transition: opacity 0.3s ease-in-out;  /* Agrega una transición suave a la opacidad */
-  border-radius: 50%;  /* Agrega bordes redondeados al contenido adicional */
+  border-radius: 99%;  /* Agrega bordes redondeados al contenido adicional */
 }
 /* Estilos para la sección hero */
 #hero {
